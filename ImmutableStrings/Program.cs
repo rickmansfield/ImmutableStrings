@@ -8,6 +8,7 @@ namespace ImmutableStrings
         static void Main(string[] args)
         {
             //-----------------Values Types-----------------
+            //See images folder in file explorer for \ImmutableStrings\images\ReferenceExample.JPG
             int x = 5;
             int y = x;
             Console.WriteLine($"x = {x}, y = {y}");

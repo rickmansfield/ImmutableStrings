@@ -30,23 +30,47 @@ namespace ImmutableStrings
             //Console.WriteLine($"first points to the same object as the second: {object.ReferenceEquals(first, second)}");
 
             //-----------------StringBuilder video 134 sqeezed inbetween other videos----------------
-            StringBuilder first = new StringBuilder("this is a string");
-            StringBuilder second = first;
-            Console.WriteLine($"first: {first}");
-            Console.WriteLine($"second: {second}");
-            Console.WriteLine($"first points to the same object as the second: {object.ReferenceEquals(first, second)}");
+            //StringBuilder first = new StringBuilder("this is a string");
+            //StringBuilder second = first;
+            //Console.WriteLine($"first: {first}");
+            //Console.WriteLine($"second: {second}");
+            //Console.WriteLine($"first points to the same object as the second: {object.ReferenceEquals(first, second)}");
 
             //--------------------Strings are Immutable--------------------
             //-----they are not changed they are recreated
             //See images folder in file explorer for C:\Users\Rick.Mansfield\source\repos\ContinuingEducation\Udemy\C#_CourseWork\ImmutableStrings\images\ReferenceExample.JPG
-            first = first.Remove(4, 5);// start at position 4 and removes 5 characters including spaces i. e. "_is_a" 
+            /*first = first.Remove(4, 5);*/// start at position 4 and removes 5 characters including spaces i. e. "_is_a" 
             //first = first.Insert(4, "is a");
-            Console.WriteLine($"first again: {first}");
-            Console.WriteLine($"second again: {second}");
-            Console.WriteLine($"first points to the same object as the second: {object.ReferenceEquals(first, second)}");
-            Console.WriteLine($"first == second: {first == second}");//"==" checks the contents of the reference points in memory. 
-            Console.WriteLine($"first .Equals second: {first.Equals(second)}");
-            
+            //Console.WriteLine($"first again: {first}");
+            //Console.WriteLine($"second again: {second}");
+            //Console.WriteLine($"first points to the same object as the second: {object.ReferenceEquals(first, second)}");
+            //Console.WriteLine($"first == second: {first == second}");//"==" checks the contents of the reference points in memory. 
+            //Console.WriteLine($"first .Equals second: {first.Equals(second)}");
+
+            //---------------------Video 139 The Remaining Append Methods---------------------
+            StringBuilder first = new StringBuilder("The values are ");
+            int a = 12;
+            int b = 34;
+            int c = 56;
+            /*first.AppendFormat("{0} {1} {2}", a, b, c);*///AppendFormat is a method that takes a string and replaces the {0} {1} {2} with the values of a, b and c.
+            first.AppendLine(":");//AppendLine adds a new line to the end of the string.
+            first.Append($"{a} {b} {c}");//Append is a method that takes a string and adds it to the end of the string.
+            Console.WriteLine(first);
+
+            //---------------------Video 140 Intro to Overloading Methods---------------------
+
+            first.Append(12);
+            first.Append(' ');
+            first.Append(3.45);
+            first.Append(' ');
+            first.Append(a == 12);
+            first.Append(' ');
+            first.Append(b > c);
+            Console.WriteLine(first);
+
+            //---------------------Video 141 ToString and More Overloading Methods---------------------
+            first.AppendLine().Append('*', 40);//AppendLine adds a new line to the end of the string.
+            Console.WriteLine(first);
         }
     }
 }

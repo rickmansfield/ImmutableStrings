@@ -68,9 +68,28 @@ namespace ImmutableStrings
             first.Append(b > c);
             Console.WriteLine(first);
 
-            //---------------------Video 141 ToString and More Overloading Methods---------------------
+            
             first.AppendLine().Append('*', 40);//AppendLine adds a new line to the end of the string.
             Console.WriteLine(first);
+
+            //---------------------Video 141 ToString and More Overloading Methods---------------------
+
+            first.Append(12.ToString());
+            first.Append(' '.ToString());
+            first.Append(3.45.ToString());
+            first.Append(' '.ToString());
+            first.Append((a == 12).ToString());
+            first.Append(' '.ToString());
+            first.Append((b > c).ToString());
+            Console.WriteLine(first);
+
+            string courseName = "C# Course";
+
+            for (int i = 0; i < courseName.Length; i++)
+            {
+                Console.WriteLine(courseName[i]);
+            }
+
         }
     }
 }
